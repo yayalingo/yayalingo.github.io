@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building an Effective SOC Playbook from Scratch — Sanya</title>
+  <meta name="description" content="A practical guide to designing SOC playbooks that balance automation with human judgment, covering alert triage, escalation, and metrics.">
+  <meta property="og:title" content="Building an Effective SOC Playbook from Scratch — Sanya">
+  <meta property="og:description" content="A practical guide to designing SOC playbooks that balance automation with human judgment.">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>墨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Sanya</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../articles.html" class="active">Articles</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../notes.html">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Article Content -->
+  <main class="article-page">
+    <div class="container">
+      <article class="article-content">
+        <header class="article-header">
+          <div class="article-meta" style="justify-content: center;">
+            <span class="date">2026-05-28</span>
+            <span class="ink-dot"></span>
+            <span>SOC Notes</span>
+          </div>
+          <h1>Building an Effective SOC Playbook from Scratch</h1>
+          <div class="article-tags" style="justify-content: center; margin-top: var(--space-lg);">
+            <span class="tag">SOC</span>
+            <span class="tag">Playbook</span>
+            <span class="tag">Automation</span>
+          </div>
+        </header>
+
+        <h2>Introduction</h2>
+        <p>
+          A SOC playbook is more than a document — it is the operational backbone of a security team.
+          It defines how alerts are triaged, how incidents are escalated, and how responses are
+          coordinated across tools and people. Yet many SOCs either lack playbooks entirely or
+          maintain outdated ones that nobody follows.
+        </p>
+        <p>
+          This article outlines a practical approach to building playbooks that are actually used,
+          balancing automation with the human judgment that security work demands.
+        </p>
+
+        <h2>Why Playbooks Matter</h2>
+        <p>
+          Without playbooks, SOC analysts rely on tribal knowledge. New hires take months to become
+          productive. Response quality varies by shift. Critical steps get missed during high-pressure
+          incidents. Playbooks solve these problems by encoding institutional knowledge into repeatable,
+          auditable processes.
+        </p>
+
+        <blockquote>
+          "The goal is not to remove human judgment from security operations, but to ensure that
+          human judgment is applied consistently and at the right moments."
+        </blockquote>
+
+        <h2>Core Components</h2>
+        <p>
+          Every effective playbook should contain these elements:
+        </p>
+        <ul>
+          <li><strong>Trigger conditions</strong> — What alerts or events initiate this playbook?</li>
+          <li><strong>Triage steps</strong> — Initial analysis procedures and data collection.</li>
+          <li><strong>Decision points</strong> — Where human judgment is required vs. automated actions.</li>
+          <li><strong>Response actions</strong> — Containment, eradication, and recovery steps.</li>
+          <li><strong>Escalation criteria</strong> — When and how to escalate to senior analysts or management.</li>
+          <li><strong>Documentation requirements</strong> — What to record for post-incident review.</li>
+        </ul>
+
+        <h2>Alert Triage Workflow</h2>
+        <p>
+          The triage workflow is where most playbooks live or die. A good triage process:
+        </p>
+        <ul>
+          <li>Validates the alert is a true positive (reduces alert fatigue).</li>
+          <li>Collects initial context from relevant data sources.</li>
+          <li>Classifies the incident by type and severity.</li>
+          <li>Determines the appropriate response track.</li>
+        </ul>
+        <p>
+          Automate data enrichment and enrichment. Keep classification and judgment human.
+          The analyst's time should focus on decisions, not data gathering.
+        </p>
+
+        <h2>Metrics That Matter</h2>
+        <p>
+          What you measure determines what you improve. Key playbook metrics include:
+        </p>
+        <ul>
+          <li><strong>Time to triage</strong> — How quickly alerts receive initial analysis.</li>
+          <li><strong>Time to containment</strong> — How quickly threats are contained.</li>
+          <li><strong>Playbook adherence</strong> — Whether analysts follow the documented process.</li>
+          <li><strong>False positive rate</strong> — Ratio of true positives in triaged alerts.</li>
+          <li><strong>Mean time to resolution</strong> — End-to-end incident resolution time.</li>
+        </ul>
+
+        <h2>Iterative Improvement</h2>
+        <p>
+          Playbooks are living documents. Review them after every significant incident.
+          Update them when new threat patterns emerge. Retire them when the technology
+          or threat landscape changes. The best SOC teams treat playbook maintenance
+          as an ongoing operational task, not a one-time project.
+        </p>
+
+        <div class="garden-line"></div>
+
+        <p class="text-muted" style="font-size: 0.9rem; text-align: center;">
+          <em>顺势而为，趋吉避凶</em>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Sanya <span class="ink-dot"></span> Cybersecurity & AI Automation</p>
+      <div class="footer-links">
+        <a href="https://github.com/sanya" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@sanya.dev">Email</a>
+        <a href="https://linkedin.com/in/sanya" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

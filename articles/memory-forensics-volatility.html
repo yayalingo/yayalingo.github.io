@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Forensics with Volatility 3 — Sanya</title>
+  <meta name="description" content="A hands-on walkthrough of using Volatility 3 for memory forensics, focusing on detecting fileless malware techniques.">
+  <meta property="og:title" content="Memory Forensics with Volatility 3 — Sanya">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>墨</text></svg>">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Sanya</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../articles.html" class="active">Articles</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../notes.html">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-content">
+        <header class="article-header">
+          <div class="article-meta" style="justify-content: center;">
+            <span class="date">2026-03-18</span>
+            <span class="ink-dot"></span>
+            <span>Forensics</span>
+          </div>
+          <h1>Memory Forensics with Volatility 3: Investigating Fileless Malware</h1>
+          <div class="article-tags" style="justify-content: center; margin-top: var(--space-lg);">
+            <span class="tag">Forensics</span>
+            <span class="tag">Memory</span>
+            <span class="tag">Volatility</span>
+          </div>
+        </header>
+
+        <h2>Why Memory Forensics?</h2>
+        <p>
+          Modern malware increasingly operates entirely in memory. Fileless techniques
+          avoid writing to disk, making traditional file-based forensics ineffective.
+          Memory forensics captures the runtime state of a system — the only place
+          where fileless malware can be observed.
+        </p>
+        <p>
+          Volatility 3 is the industry-standard tool for memory forensics. It provides
+          plugins for extracting processes, network connections, registry hives, and
+          other artifacts from memory dumps.
+        </p>
+
+        <h2>Acquiring Memory</h2>
+        <p>
+          Before analysis, you need a memory dump. Tools like <code>winpmem</code>,
+          <code>FTK Imager</code>, or <code>LiME</code> (for Linux) can capture
+          physical memory. The key is acquiring the dump before it becomes contaminated
+          by the acquisition tool itself.
+        </p>
+
+        <h2>Process Analysis</h2>
+        <p>
+          The first step in any memory investigation is process analysis. Volatility's
+          <code>pslist</code>, <code>pstree</code>, and <code>psxview</code> plugins
+          reveal the process hierarchy and can detect hidden processes — a common
+          technique used by rootkits and advanced malware.
+        </p>
+
+        <h2>Detecting Fileless Techniques</h2>
+        <p>
+          Fileless malware often resides in process memory, injected into legitimate
+          processes. Key Volatility plugins for detection include:
+        </p>
+        <ul>
+          <li><strong>malfind</strong> — Detects injected code and suspicious memory regions.</li>
+          <li><strong>hollowfind</strong> — Identifies process hollowing techniques.</li>
+          <li><strong>cmdline</strong> — Shows command-line arguments for each process.</li>
+          <li><strong>netscan</strong> — Reveals network connections and listening ports.</li>
+        </ul>
+
+        <blockquote>
+          "Memory does not lie. It may be complex, it may be noisy, but it holds
+          the truth of what happened on the system."
+        </blockquote>
+
+        <div class="garden-line"></div>
+        <p class="text-muted" style="font-size: 0.9rem; text-align: center;"><em>顺势而为，趋吉避凶</em></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Sanya <span class="ink-dot"></span> Cybersecurity & AI Automation</p>
+      <div class="footer-links">
+        <a href="https://github.com/sanya" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@sanya.dev">Email</a>
+        <a href="https://linkedin.com/in/sanya" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

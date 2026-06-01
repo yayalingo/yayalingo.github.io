@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Sanya</title>
+  <meta name="description" content="Cybersecurity and automation projects by Sanya — penetration testing agents, SOC automation, detection rules, and AI security orchestration.">
+  <meta property="og:title" content="Projects — Sanya">
+  <meta property="og:description" content="Cybersecurity and automation projects by Sanya.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>墨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sanya</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Page -->
+  <main class="article-page">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="cn-subtitle cn-text">项目</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="project-list">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>Kali Pentest Agent</h3>
+            <p>
+              An AI-powered penetration testing agent built on Kali Linux. Automates reconnaissance,
+              vulnerability scanning, and exploitation workflows using LLM-driven decision making.
+              Supports custom toolchains and integrates with existing red team infrastructure.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">AI Agent</span>
+              <span class="tag">Python</span>
+              <span class="tag">Kali Linux</span>
+              <span class="tag">LLM</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>SOC Automation Playbooks</h3>
+            <p>
+              A collection of SOAR playbooks designed for common SOC workflows. Covers alert enrichment
+              from multiple sources, automated escalation based on severity, ticket creation, and
+              post-incident reporting. Compatible with major SOAR platforms.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">SOAR</span>
+              <span class="tag">Automation</span>
+              <span class="tag">SOC</span>
+              <span class="tag">YAML</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>Sentinel Detection Rules</h3>
+            <p>
+              Custom Microsoft Sentinel analytics rules, workbooks, and hunting queries. Includes
+              rules for endpoint threats, cloud audit anomalies, identity-based attacks, and
+              lateral movement detection. Maintained as detection-as-code with CI/CD validation.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">Sentinel</span>
+              <span class="tag">KQL</span>
+              <span class="tag">Detection</span>
+              <span class="tag">Azure</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>AI Security Orchestrator</h3>
+            <p>
+              An experimental platform for LLM-driven security orchestration. Uses language models
+              to analyze alerts, correlate events across data sources, and propose response actions.
+              Explores the boundary between automated response and human-in-the-loop workflows.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">AI</span>
+              <span class="tag">Orchestration</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>EDR Telemetry Analyzer</h3>
+            <p>
+              A toolkit for analyzing EDR telemetry data. Parses and normalizes endpoint logs,
+              identifies suspicious process chains, and generates forensic timelines. Supports
+              multiple EDR vendors through a pluggable adapter architecture.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">EDR</span>
+              <span class="tag">Forensics</span>
+              <span class="tag">Python</span>
+              <span class="tag">Analysis</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-info">
+            <h3>Cloud Security Posture Scripts</h3>
+            <p>
+              Python scripts for automated cloud security posture assessment. Checks AWS, Azure,
+              and GCP configurations against CIS benchmarks and custom security policies.
+              Generates compliance reports and remediation suggestions.
+            </p>
+            <div class="project-tags mt-lg">
+              <span class="tag">Cloud</span>
+              <span class="tag">Compliance</span>
+              <span class="tag">Python</span>
+              <span class="tag">CIS</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Sanya <span class="ink-dot"></span> Cybersecurity & AI Automation</p>
+      <div class="footer-links">
+        <a href="https://github.com/sanya" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@sanya.dev">Email</a>
+        <a href="https://linkedin.com/in/sanya" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

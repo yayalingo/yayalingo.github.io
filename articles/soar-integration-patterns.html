@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOAR Integration Patterns for Modern Security Teams — Sanya</title>
+  <meta name="description" content="Design patterns for integrating SOAR platforms with existing security tooling, covering API orchestration and scalable automation.">
+  <meta property="og:title" content="SOAR Integration Patterns — Sanya">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>墨</text></svg>">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Sanya</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../articles.html" class="active">Articles</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../notes.html">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-content">
+        <header class="article-header">
+          <div class="article-meta" style="justify-content: center;">
+            <span class="date">2026-03-02</span>
+            <span class="ink-dot"></span>
+            <span>Automation</span>
+          </div>
+          <h1>SOAR Integration Patterns for Modern Security Teams</h1>
+          <div class="article-tags" style="justify-content: center; margin-top: var(--space-lg);">
+            <span class="tag">SOAR</span>
+            <span class="tag">Integration</span>
+            <span class="tag">API</span>
+          </div>
+        </header>
+
+        <h2>The Integration Challenge</h2>
+        <p>
+          Security orchestration, automation, and response (SOAR) platforms are only
+          as effective as their integrations. A SOAR platform that cannot connect to
+          your EDR, SIEM, threat intelligence feeds, and ticketing system is just
+          another dashboard. The real value comes from connecting these systems into
+          coherent, automated workflows.
+        </p>
+
+        <h2>Common Integration Patterns</h2>
+        <p>
+          After building integrations across multiple SOAR platforms, several patterns
+          emerge as consistently effective:
+        </p>
+        <ul>
+          <li><strong>Enrichment-first</strong> — Always enrich before deciding. Gather context from multiple sources before triggering response actions.</li>
+          <li><strong>Fan-out aggregation</strong> — Query multiple sources in parallel, aggregate results, then make a single decision.</li>
+          <li><strong>Circuit breaker</strong> — Handle API failures gracefully. If a source is unavailable, proceed with available data and flag the gap.</li>
+          <li><strong>Idempotent actions</strong> — Design actions so they can be safely retried. Network calls fail; your playbooks should handle that.</li>
+        </ul>
+
+        <h2>Data Normalization</h2>
+        <p>
+          Different tools use different schemas for the same concepts (IP addresses,
+          usernames, timestamps). Normalizing data at the integration layer — not in
+          every playbook — reduces complexity and improves maintainability.
+        </p>
+
+        <h2>Scalable Architecture</h2>
+        <p>
+          As playbook libraries grow, architecture matters. Separate data collection
+          from decision logic. Separate decision logic from response actions. Use
+          shared utility playbooks for common operations like enrichment and notification.
+        </p>
+
+        <blockquote>
+          "The best SOAR integration is the one you do not have to think about —
+          it just works, every time, quietly."
+        </blockquote>
+
+        <div class="garden-line"></div>
+        <p class="text-muted" style="font-size: 0.9rem; text-align: center;"><em>顺势而为，趋吉避凶</em></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Sanya <span class="ink-dot"></span> Cybersecurity & AI Automation</p>
+      <div class="footer-links">
+        <a href="https://github.com/sanya" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@sanya.dev">Email</a>
+        <a href="https://linkedin.com/in/sanya" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
